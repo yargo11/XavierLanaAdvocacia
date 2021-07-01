@@ -41,7 +41,7 @@ export default function Equipe() {
                         <Heading fontSize='3xl' mb={4} ml='auto'>Fernanda Lana</Heading>
                         <Heading fontSize='2xl' mb={4} ml='auto'>Sócia- Fundadora</Heading>
                         <Text fontSize='xl' lineHeight={1.25} display='block' textAlign='justify'>
-                            <Image src='/images/lana.jpeg' alt='Fernanda Lana' w="280px" float='left' m={4} />
+                            <Image src='/images/Lana.jpeg' alt='Fernanda Lana' w="280px" float='left' m={4} />
                             Mestranda em Direito, Professora, advogada nas mais diversas áreas do direito empresarial com
                             mais de 20 anos de atuação, assessorando empresas a desenvolverem suas atividades com maior
                             segurança jurídica sobretudo nas áreas cível, contratual, ambiental, minerária, societária e
