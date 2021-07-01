@@ -1,6 +1,6 @@
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
-import { Flex, Heading, Text } from '@chakra-ui/react'
+import { Flex, Heading, Text, Image } from '@chakra-ui/react'
 
 
 export default function Escritorio() {
@@ -22,6 +22,8 @@ export default function Escritorio() {
                 <Text  fontSize='xl' lineHeight={1} my={2}>Nosso propósito é prestar serviços de inteligência jurídica para impulsionar oportunidades ajudando
                     a preservar e criar valor para os negócios de nossos clientes.
                 </Text>
+
+                <Image src='/images/xla.jpg' alt='Escritório'/>
             </Flex>
             <Footer />
         </Flex>
