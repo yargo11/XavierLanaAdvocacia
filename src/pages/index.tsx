@@ -7,13 +7,14 @@ import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa'
 export default function Home() {
   return (
     <Flex direction='column'>
-      <Header coverImg='xla.jpg' />
+      <Header coverImg='xlaesc.jpg' />
       <Flex
-        maxW={1200}
+        maxW={1210}
         m='auto'
       >
-        <Wrap spacing="30px" justify='center' m='auto'>
-          <WrapItem >
+        <Wrap spacing='-4px' justify='center' m='auto'>
+          <WrapItem 
+          borderBottom='1px solid #969696'>
             <Center w="380px" h="309px" d='flex' flexDirection='column' p='27px' alignItems='flex-start'>
               <Heading size='lg'>O Escritório</Heading>
               <Spacer />
@@ -28,12 +29,17 @@ export default function Home() {
               </Link>
             </Center>
           </WrapItem>
-          <WrapItem>
+          <WrapItem
+            borderRight='1px solid #969696'
+            borderBottom='1px solid #969696'
+            borderLeft='1px solid #969696'
+          >
             <Center w="380px" h="309px">
               <Image w='325px' h='254px' src='/images/img-destaque-1.jpg' alt='Descrição' />
             </Center>
           </WrapItem>
-          <WrapItem>
+          <WrapItem
+          borderBottom='1px solid #969696'>
             <Center w="380px" h="309px" d='flex' flexDirection='column' p='27px' alignItems='flex-start'>
               <Heading size='lg'>Advogados</Heading>
               <Spacer />
@@ -52,7 +58,10 @@ export default function Home() {
               <Image w='325px' h='254px' src='/images/img-destaque-2.jpg' alt='Descrição' />
             </Center>
           </WrapItem>
-          <WrapItem>
+          <WrapItem
+            borderRight='1px solid #969696'
+            borderLeft='1px solid #969696'
+          >
             <Center w="380px" h="309px" d='flex' flexDirection='column' p='27px' alignItems='flex-start'>
               <Heading size='lg'>Especialidades</Heading>
               <Spacer />
@@ -76,6 +85,7 @@ export default function Home() {
       </Flex>
       <Flex
         maxW={1200}
+        w='100%'
         border='1px solid #c0c0c1'
         m='auto'
         h={308}
@@ -86,7 +96,7 @@ export default function Home() {
           direction='column'
           p={25}
           w='70%'
-          minW='32rem'
+        // minW='32rem'
         >
           <Heading size='lg'>
             Reconhecimentos

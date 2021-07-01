@@ -1,6 +1,6 @@
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
-import { Flex, Heading, Text, Box, Image, Spacer, Wrap, WrapItem } from '@chakra-ui/react'
+import { Flex, Heading, Text, Image, Wrap, WrapItem } from '@chakra-ui/react'
 
 import styles from './styles.module.scss'
 
@@ -20,7 +20,7 @@ export default function Equipe() {
                         <Heading fontSize='3xl' mb={4}>Érico Xavier Lima</Heading>
                         <Heading fontSize='2xl' mb={4}>Sócio Fundador</Heading>
                         <Text fontSize='xl' lineHeight={1.25} display='block' textAlign='justify'>
-                            <Image src='/images/erico.jpeg' alt='Érico Xavier Lima' boxSize="280px" float='right' m={4} />
+                            <Image src='/images/erico.jpeg' alt='Érico Xavier Lima' w="280px" float='right' m={4} />
                             Reúne há 19 anos as melhores práticas na área empresarial com foco em Societário,
                             Fiscal/Tributário, Contencioso Cível, é Conselheiro de Administração pela Fundação Dom
                             Cabral-FDC ajudando empresas a desenvolver seus negócios no ambiente de Governança Corporativa
@@ -41,7 +41,7 @@ export default function Equipe() {
                         <Heading fontSize='3xl' mb={4} ml='auto'>Fernanda Lana</Heading>
                         <Heading fontSize='2xl' mb={4} ml='auto'>Sócia- Fundadora</Heading>
                         <Text fontSize='xl' lineHeight={1.25} display='block' textAlign='justify'>
-                            <Image src='/images/lana.jpg' alt='Fernanda Lana' boxSize="280px" float='left' m={4} />
+                            <Image src='/images/lana.jpeg' alt='Fernanda Lana' w="280px" float='left' m={4} />
                             Mestranda em Direito, Professora, advogada nas mais diversas áreas do direito empresarial com
                             mais de 20 anos de atuação, assessorando empresas a desenvolverem suas atividades com maior
                             segurança jurídica sobretudo nas áreas cível, contratual, ambiental, minerária, societária e

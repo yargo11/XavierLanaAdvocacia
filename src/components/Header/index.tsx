@@ -25,10 +25,11 @@ export function Header(props) {
                 m='auto'
                 mt={-57}
                 className={styles.menu}
+                // color='#d1ab86'
             >
                 <Menu >
                     <MenuButton as='a' href='/' className={styles.menuButton}>
-                        <Image src='/images/Logo_Oficial-02.png' alt='logo' w={291} objectFit='cover'/>
+                        <Image src='/images/Logo_Oficial-03.png' alt='logo' w={291} objectFit='cover'/>
                     </MenuButton>
                     <MenuButton as='a' href='/escritorio' className={styles.menuButton} >
                         O Escritório
