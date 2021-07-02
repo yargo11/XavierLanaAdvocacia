@@ -1,9 +1,23 @@
-import { Flex, Menu, MenuButton, Image, Text, Divider, Center, Box, Icon } from '@chakra-ui/react';
-import { FiLinkedin } from 'react-icons/fi';
+import React from 'react';
+import {
+    Flex, Menu, MenuButton, Image, Text, Divider, Center, Box, Icon, useMediaQuery, useDisclosure, Button,
+    Drawer,
+    DrawerBody,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerCloseButton
+} from '@chakra-ui/react';
+import { FiLinkedin, FiMenu } from 'react-icons/fi';
 
 import styles from './styles.module.scss';
 
 export function Header(props) {
+    const [isSmallerThan768] = useMediaQuery("(max-width: 768px)")
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const btnRef = React.useRef()
+
     return (
         <Flex
             as="header"
@@ -11,7 +25,7 @@ export function Header(props) {
             direction='column'
             color='gray.50'
         >
-            <Image src={`/images/${props.coverImg}`} alt='Xavier e Lana Advocacia' maxH={429} objectFit='cover'/>
+            <Image src={`/images/${props.coverImg}`} alt='Xavier e Lana Advocacia' maxH={429} objectFit='cover' />
             <Flex
                 bg='#444444'
                 h={114}
@@ -25,25 +39,73 @@ export function Header(props) {
                 m='auto'
                 mt={-57}
                 className={styles.menu}
-                // color='#d1ab86'
+            // color='#d1ab86'
             >
-                <Menu >
-                    <MenuButton as='a' href='/' className={styles.menuButton}>
-                        <Image src='/images/Logo_Oficial-03.png' alt='logo' w={291} objectFit='cover'/>
-                    </MenuButton>
-                    <MenuButton as='a' href='/escritorio' className={styles.menuButton} >
-                        O Escritório
-                    </MenuButton>
-                    <MenuButton as='a' href='/areas' className={styles.menuButton}>
-                        Áreas de atuação
-                    </MenuButton>
-                    <MenuButton as='a' href='/equipe' className={styles.menuButton}>
-                        Equipe
-                    </MenuButton>
-                    <MenuButton as='a' href='/contato' className={styles.menuButton}>
-                        Contato
-                    </MenuButton>
-                </Menu>
+                {
+                    isSmallerThan768 ?
+                        <Menu >
+                            <MenuButton as='a' href='/' className={styles.menuButton}>
+                                <Image src='/images/Logo_Oficial-03.png' alt='logo' w={291} objectFit='cover' />
+                            </MenuButton>
+                            <MenuButton as='button' ref={btnRef} onClick={onOpen} >
+                                <Icon as={FiMenu} />
+                            </MenuButton>
+
+                        </Menu>
+                        :
+                        <Menu >
+                            <MenuButton as='a' href='/' className={styles.menuButton}>
+                                <Image src='/images/Logo_Oficial-03.png' alt='logo' w={291} objectFit='cover' />
+                            </MenuButton>
+                            <MenuButton as='a' href='/escritorio' className={styles.menuButton} >
+                                O Escritório
+                            </MenuButton>
+                            <MenuButton as='a' href='/areas' className={styles.menuButton}>
+                                Áreas de atuação
+                            </MenuButton>
+                            <MenuButton as='a' href='/equipe' className={styles.menuButton}>
+                                Equipe
+                            </MenuButton>
+                            <MenuButton as='a' href='/contato' className={styles.menuButton}>
+                                Contato
+                            </MenuButton>
+                        </Menu>
+
+                }
+                <Drawer
+                    isOpen={isOpen}
+                    placement="left"
+                    onClose={onClose}
+                    finalFocusRef={btnRef}
+                >
+                    <DrawerOverlay />
+                    <DrawerContent>
+                        <DrawerCloseButton />
+                        {/* <DrawerHeader>
+                            <Image src='/images/Logo_Oficial-02.png' alt='logo' w={291} objectFit='cover' />
+                        </DrawerHeader> */}
+
+                        <DrawerBody>
+                            <Menu >
+                                <MenuButton as='a' href='/' className={styles.menuButton}>
+                                    <Image src='/images/Logo_Oficial-02.png' alt='logo' w={291} objectFit='cover' />
+                                </MenuButton>
+                                <MenuButton as='a' href='/escritorio' fontSize='100px' className={styles.menuButton} >
+                                    O Escritório
+                                </MenuButton>
+                                <MenuButton as='a' href='/areas' className={styles.menuButton}>
+                                    Áreas de atuação
+                                </MenuButton>
+                                <MenuButton as='a' href='/equipe' className={styles.menuButton}>
+                                    Equipe
+                                </MenuButton>
+                                <MenuButton as='a' href='/contato' className={styles.menuButton}>
+                                    Contato
+                                </MenuButton>
+                            </Menu>
+                        </DrawerBody>
+                    </DrawerContent>
+                </Drawer>
             </Flex>
             <Flex
                 maxW={1140}

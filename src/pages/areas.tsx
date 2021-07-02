@@ -9,7 +9,7 @@ export default function areas() {
     return (
         <Flex direction='column'>
             <Header coverImg='img-escritorio.jpg' />
-            <Flex w='100%' maxW={1140} m='auto'>
+            <Flex w='100%' maxW={1140} m='auto' p={4}>
                 <Tabs variant="soft-rounded" colorScheme="blackAlpha">
                     <TabList>
                         <Tab>Societário</Tab>

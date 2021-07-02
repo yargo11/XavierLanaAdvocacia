@@ -7,7 +7,7 @@ export default function Contato() {
         <Flex direction='column'>
             <Header coverImg='img-escritorio.jpg' />
             <Divider borderTopWidth={4} borderTopColor="#222" />
-            <Flex direction='column' w='100%' h={230} maxW={1140} m='auto' my={8}>
+            <Flex direction='column' w='100%' h={230} maxW={1140} m='auto' my={8} p={4}>
                 <Heading>Endereço</Heading>
                 <Spacer />
                 <Text>

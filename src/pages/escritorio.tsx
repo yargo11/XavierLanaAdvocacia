@@ -7,7 +7,7 @@ export default function Escritorio() {
     return (
         <Flex direction='column'>
             <Header coverImg='img-escritorio.jpg' />
-            <Flex direction='column' maxW={1140} w='100%' m='auto' my={8}>
+            <Flex direction='column' maxW={1140} w='100%' m='auto' my={8} p={4}>
                 <Heading mb={4}>O Escritório</Heading>
                 <Text fontSize='xl' lineHeight={1} my={2}>
                     Escritório nascido da fusão de expertises e experiências no mundo empresarial, buscamos as melhores

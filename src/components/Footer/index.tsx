@@ -5,7 +5,7 @@ export function Footer() {
     return (
         <Flex direction='column' bg='#444444'>
             <Divider borderTopWidth={4} borderTopColor="#222" />
-            <Flex direction='column' w='100%' h={230} maxW={1140} m='auto' my={8} color='gray.50'>
+            <Flex direction='column' w='100%' p={4} h={230} maxW={1140} m='auto' my={8} color='gray.50'>
                 <Heading>Localização</Heading>
                 <Spacer />
                 <Text>
