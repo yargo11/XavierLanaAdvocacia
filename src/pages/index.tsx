@@ -51,7 +51,7 @@ export default function Home() {
                 borderBottom='1px solid #969696'
               >
                 <Center w="380px" h="309px">
-                  <Image w='325px' h='254px' src='/images/img-destaque-1.jpg' alt='Descrição' />
+                  <Image w='325px' h='254px' src='/images/xla.jpg' alt='Descrição' />
                 </Center>
               </WrapItem>
               <WrapItem
@@ -125,7 +125,7 @@ export default function Home() {
                 borderLeft='1px solid #969696'
               >
                 <Center w="380px" h="309px">
-                  <Image w='325px' h='254px' src='/images/img-destaque-1.jpg' alt='Descrição' />
+                  <Image w='325px' h='254px' src='/images/xla.jpg' alt='Descrição' />
                 </Center>
               </WrapItem>
               <WrapItem
